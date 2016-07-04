@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip">
+        <!-- Logo Start-->
+        <ImageView android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"/>
+        <!-- Logo Ends -->
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dip"
+        android:scrollbarStyle="insideInset"
+        android:fillViewport="true"
+        >
+<!--
+        <HorizontalScrollView
+            android:layout_height="fill_content"
+            android:layout_width="wrap_content"
+
+            android:id="@+id/horizontalView"
+            android:scrollbars="vertical"
+            android:layout_marginTop="1dip">
+-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    tools:context="com.example.nigc_daq.nigc.DisplayMessageActivity"
+    tools:ignore="MergeRootFrame"
+    style="@style/AppTheme"
+    android:textAlignment="center"
+    android:gravity="center_vertical|center|center_horizontal"
+    android:clickable="false"
+>
+
+<TableRow android:baselineAligned="false"
+    android:gravity="right"
+    android:background="#f0efee"
+    android:layout_width="fill_parent">
+    <EditText
+        android:background="@drawable/rounded_corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/e1txt"
+        android:text="@string/lbl1"
+        android:editable="false"
+        android:inputType="number"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lbl1"
+        android:id="@+id/textView"
+        android:gravity="center"
+         />
+</TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e2txt"
+            android:text="@string/lbl2"
+            android:editable="false"
+            android:inputType="text"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl2"
+            android:id="@+id/textView2"
+            android:gravity="center"
+             />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="center"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e3txt"
+            android:text="@string/lbl3"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl3"
+            android:id="@+id/textView3"
+            android:gravity="center"
+             />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e4txt"
+            android:text="@string/lbl4"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl4"
+            android:id="@+id/textView4"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="بروز رسانی تاریخ آخرین تعمیرات"
+            android:id="@+id/oedbtn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:onClick="update_oed" />
+    </TableRow>
+
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e5txt"
+            android:text="@string/lbl5"
+            android:editable="false"
+            android:inputType="number"
+            android:autoText="true"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl5"
+            android:id="@+id/textView5"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e6txt"
+            android:text="@string/lbl6"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl6"
+            android:id="@+id/textView6"
+            android:gravity="center"
+              />
+    </TableRow>
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e7txt"
+            android:text="@string/lbl7"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl7"
+            android:id="@+id/textView7"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e8txt"
+            android:text="@string/lbl8"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl8"
+            android:id="@+id/textView8"
+            android:gravity="center"
+              />
+    </TableRow>
+
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e9txt"
+            android:text="@string/lbl9"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl9"
+            android:id="@+id/textView9"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e10txt"
+            android:text="@string/lbl10"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl10"
+            android:id="@+id/textView10"
+            android:gravity="center"
+              />
+    </TableRow>
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e11txt"
+            android:text="@string/lbl11"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl11"
+            android:id="@+id/textView11"
+            android:gravity="center"
+              />
+    </TableRow>
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e12txt"
+            android:text="@string/lbl12"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl12"
+            android:id="@+id/textView12"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e13txt"
+            android:text="@string/lbl13"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl13"
+            android:id="@+id/textView13"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e14txt"
+            android:text="@string/lbl14"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl14"
+            android:id="@+id/textView14"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e15txt"
+            android:text="@string/lbl15"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl15"
+            android:id="@+id/textView15"
+            android:gravity="center"
+              />
+    </TableRow>
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e16txt"
+            android:text="@string/lbl16"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl16"
+            android:id="@+id/textView16"
+            android:gravity="center"
+              />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e17txt"
+            android:text="@string/lbl17"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl17"
+            android:id="@+id/textView17"
+            android:gravity="center"
+            />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+        <EditText
+            android:background="@drawable/rounded_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/e18txt"
+            android:text="@string/lbl18"
+            android:editable="false"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/lbl18"
+            android:id="@+id/textView18"
+            android:gravity="center"
+            />
+    </TableRow>
+
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="ثبت تصویر جدید"
+            android:id="@+id/tkpicbtn"
+            android:onClick="dispatchTakePictureIntent" />
+    </TableRow>
+
+    <TableRow android:baselineAligned="false"
+        android:gravity="right"
+        android:background="#f0efee">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="ذخیره تغییرات"
+            android:id="@+id/savebtn"
+            android:onClick="savechanges" />
+    </TableRow>
+
+
+</TableLayout>
+        <!--
+ </HorizontalScrollView>
+ -->
+    </ScrollView>
+
+</LinearLayout>

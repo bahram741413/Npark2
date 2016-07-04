@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dip"
+        android:paddingBottom="25dip">
+        <!-- Logo Start-->
+
+        <TextView
+            android:text="@string/tsklst"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/header_gradient"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:textSize="45dp"
+            android:textIsSelectable="true"
+            android:textColor="#f6ffff" />        <!-- Logo Ends -->
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dip"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="horizontal|vertical" >
+
+
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        tools:ignore="MergeRootFrame"
+        style="@style/AppTheme"
+        android:textAlignment="center"
+        android:gravity="center_vertical|center|center_horizontal"
+        android:clickable="false"
+        >
+        <TableRow>
+
+            <ImageView
+                android:paddingTop="20dip"
+                android:paddingBottom="25dip"
+                android:layout_width="wrap_content"
+                android:layout_height="240dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/ilia"
+                android:layout_span="2" />
+        </TableRow>
+
+        <TableRow android:baselineAligned="false"
+
+            android:gravity="center"
+            android:background="#f0efee"
+            android:layout_width="fill_parent">
+
+            <Button android:id="@+id/task5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsklbl3"
+                android:background="@drawable/rounded_corner"
+
+                android:textSize="25sp" />
+        </TableRow>
+
+
+
+
+
+
+
+        <TableRow android:baselineAligned="false"
+            android:gravity="center"
+            android:background="#f0efee"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content">
+            <Button android:id="@+id/task1"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title5"
+                android:background="@drawable/rounded_corner"
+
+                android:textSize="25sp" />
+
+        </TableRow>
+
+
+
+
+
+        <TableRow android:baselineAligned="false"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="#f0efee"
+            android:layout_width="wrap_content">
+            <Button android:id="@+id/task3"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsklbl2"
+                android:background="@drawable/rounded_corner"
+
+                android:textSize="25sp" />
+        </TableRow>
+
+
+        <TableRow android:baselineAligned="false"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="#f0efee"
+            android:layout_width="wrap_content">
+            <Button android:id="@+id/task7"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsklbl7"
+                android:background="@drawable/rounded_corner"
+
+                android:textSize="25sp" />
+        </TableRow>
+
+
+        <TableRow android:baselineAligned="false"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="#f0efee"
+            android:layout_width="wrap_content">
+            <Button android:id="@+id/task6"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsklbl6"
+                android:background="@drawable/rounded_corner"
+
+                android:textSize="25sp" />
+        </TableRow>
+
+
+
+
+        <TableRow android:baselineAligned="false"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="#f0efee"
+            android:layout_width="wrap_content">
+            <Button android:id="@+id/task4"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tsklbl4"
+                android:background="@drawable/rounded_corner"
+
+                android:textSize="25sp" />
+        </TableRow>
+
+
+
+    </TableLayout>
+    </ScrollView>
+</LinearLayout>

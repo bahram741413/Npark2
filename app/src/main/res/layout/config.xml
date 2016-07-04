@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@layout/header_gradient"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip">
+        <!-- Logo Start-->
+        <TextView
+            android:text="تنظیمات"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@layout/header_gradient"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="#f6ffff"
+            android:gravity="center_vertical|center|center_horizontal" />         <!-- Logo Ends -->
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dip"
+        android:scrollbarStyle="insideInset"
+        android:fillViewport="true"
+        >
+        <!--
+                <HorizontalScrollView
+                    android:layout_height="fill_content"
+                    android:layout_width="wrap_content"
+
+                    android:id="@+id/horizontalView"
+                    android:scrollbars="vertical"
+                    android:layout_marginTop="1dip">
+        -->
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            tools:ignore="MergeRootFrame"
+            style="@style/AppTheme"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:clickable="false"
+            >
+
+            <TableRow android:baselineAligned="false"
+                android:gravity="center"
+                android:background="@drawable/labelfrmt"
+                android:layout_width="fill_parent">
+                <EditText
+                    android:background="@drawable/rounded_corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/octxt"
+                    android:hint="کد افسر پارک"
+                    android:maxLength="4"
+                    android:editable="true"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/lbl10"
+                    android:gravity="right"
+                    android:textSize="30dp" />
+
+
+
+            </TableRow>
+
+            <TableRow android:baselineAligned="false"
+                android:gravity="center"
+                android:background="@drawable/labelfrmt">
+
+                <EditText
+                    android:background="@drawable/rounded_corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pctxt"
+                    android:hint="کد استان"
+                    android:maxLength="2"
+                    android:editable="true"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="50dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/lbl11"
+                    android:gravity="right"
+                    android:textSize="30dp" />
+
+            </TableRow>
+
+            <TableRow android:baselineAligned="false"
+                android:gravity="center"
+                android:background="@drawable/labelfrmt">
+
+                <EditText
+                    android:background="@drawable/rounded_corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cctxt"
+                    android:hint="کد شهر"
+                    android:maxLength="2"
+                    android:editable="true"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="50dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/lbl12"
+                    android:gravity="right"
+                    android:textSize="30dp" />
+
+            </TableRow>
+
+
+            <TableRow android:baselineAligned="false"
+                android:gravity="center"
+                android:background="@drawable/labelfrmt">
+
+                <EditText
+                    android:background="@drawable/rounded_corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rctxt"
+                    android:hint="کدمسیر"
+                    android:maxLength="4"
+                    android:editable="true"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:textSize="50dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/lbl13"
+                    android:gravity="right"
+                    android:textSize="30dp" />
+
+            </TableRow>
+
+
+            <TableRow android:baselineAligned="false"
+                android:gravity="center"
+                android:background="@drawable/labelfrmt">
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/picview"
+                    android:layout_column="0"
+                    android:scaleType="fitCenter" />
+
+            </TableRow>
+
+            <TableRow android:baselineAligned="false"
+                android:gravity="center"
+                android:background="@drawable/labelfrmt">
+                <Button
+                    android:background="#ff66116b"
+                    android:textColor="#f6ffff"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="ثبت"
+                    android:id="@+id/savebtn"
+                    android:textSize="35sp"
+                    android:onClick="savechanges" />
+            </TableRow>
+
+
+        </TableLayout>
+        <!--
+ </HorizontalScrollView>
+ -->
+    </ScrollView>
+
+</LinearLayout>

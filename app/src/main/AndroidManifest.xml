@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.it.farano.npark" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fico"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".tasklist"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".preg"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".splash"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".settings"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Cardreg"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ChargeSell"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".login"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="org.jumpmind.symmetric.android.SymmetricService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="org.jumpmind.symmetric.android.SymmetricService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".nnfc"
+            android:label="@string/title_activity_nfcreadwrite" >
+
+            <!--
+                <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <meta-data
+                    android:name="android.nfc.action.TECH_DISCOVERED"
+                    android:resource="@xml/nfc_tech_filter" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".showcredits"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
